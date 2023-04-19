@@ -11,9 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="62dp"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="Enter First Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edtname2"
         app:layout_constraintEnd_toEndOf="@+id/edtname2" />
@@ -25,7 +25,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginBottom="59dp"
         android:ems="10"
-        android:hint="Second Name"
+        android:hint="Enter Second Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edtemail"
         app:layout_constraintStart_toStartOf="@+id/edtemail" />
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginBottom="61dp"
+        android:layout_marginBottom="62dp"
         android:ems="10"
         android:hint="Enter Email"
         android:inputType="textEmailAddress"
@@ -46,11 +46,11 @@
         android:id="@+id/edtpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="214dp"
+        android:layout_marginBottom="53dp"
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnaccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -58,9 +58,19 @@
         android:id="@+id/btnaccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="18dp"
         android:text="CREATE ACCOUNT"
-        app:layout_constraintEnd_toEndOf="@+id/edtpassword"
-        app:layout_constraintTop_toBottomOf="@+id/edtpassword" />
+        app:layout_constraintBottom_toTopOf="@+id/btnlogin"
+        app:layout_constraintEnd_toEndOf="@+id/edtpassword" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="46dp"
+        android:text="LOGIN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnaccount" />
 </androidx.constraintlayout.widget.ConstraintLayout>

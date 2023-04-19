@@ -1,6 +1,7 @@
 package com.example.authenticationsql
 
 import android.content.Context
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var edt_email:EditText
     lateinit var edt_password:EditText
     lateinit var account_button:Button
+    lateinit var login_button:Button
     lateinit var db:SQLiteDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         edt_email = findViewById(R.id.edtemail)
         edt_password = findViewById(R.id.edtpassword)
         account_button = findViewById(R.id.btnaccount)
+        login_button = findViewById(R.id.btnlogin)
 
         db = openOrCreateDatabase("usersDB", Context.MODE_PRIVATE, null)
 
@@ -54,7 +57,12 @@ class MainActivity : AppCompatActivity() {
                 //Toast a success message
                 Toast.makeText(this, "USER CREATED SUCCESSFULLY ", Toast.LENGTH_SHORT).show()
 
+                var gotologin = Intent(this, LoginActivity::class.java)
+                startActivity(gotologin)
+
             }
+
+
         }
 
     }

@@ -1,5 +1,6 @@
 package com.example.authenticationsql
 
+import android.content.Context
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,8 @@ class LoginActivity : AppCompatActivity() {
         password_login = findViewById(R.id.edtpasscode)
         login_button = findViewById(R.id.btn_login)
         register_button = findViewById(R.id.btn_register)
+
+        db = openOrCreateDatabase("usersDB", Context.MODE_PRIVATE, null)
 
 
 
